@@ -1,4 +1,3 @@
 package com.octored.wifiscanner.model
 
-class AvailableNetwork {
-}
+data class AvailableNetwork(val SSID: String, val level: Int, val password: Boolean)
