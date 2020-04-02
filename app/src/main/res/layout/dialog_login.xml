@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="20dp"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/dialog_idLabel_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SSID"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/dialog_passLabel_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Password:"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dialog_idLabel_tv" />
+
+    <EditText
+        android:id="@+id/dialog_pass_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="8"
+        android:focusedByDefault="true"
+        android:inputType="textPassword"
+        app:layout_constraintTop_toBottomOf="@id/dialog_passLabel_tv"
+        app:layout_constraintLeft_toLeftOf="@id/dialog_passLabel_tv"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

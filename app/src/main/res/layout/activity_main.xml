@@ -4,12 +4,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".presentation.MainActivity">
 
-      <androidx.recyclerview.widget.RecyclerView
-          android:id="@+id/main_networks_rv"
-          android:layout_width="match_parent"
-          android:layout_height="match_parent"
-          tools:listitem="@layout/item_network"/>
 
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/main_networks_srl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/main_networks_rv"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            tools:itemCount="5"
+            tools:listitem="@layout/item_network" />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        style="@style/Widget.Design.FloatingActionButton"
+        android:id="@+id/main_disconnect_ib"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/ic_network_disconnect"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    />
 </androidx.constraintlayout.widget.ConstraintLayout>

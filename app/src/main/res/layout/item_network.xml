@@ -3,8 +3,10 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:padding="15dp"
-    android:layout_margin="10dp">
+    android:padding="10dp"
+    android:layout_margin="5dp"
+    android:elevation="5dp"
+    android:background="@color/colorNetworkItemBackground">
 
     <TextView
         android:id="@+id/item_ssid_tv"
@@ -13,7 +15,8 @@
         android:text="TextView"
         android:textColor="#000000"
         android:textSize="18sp"
-        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintLeft_toRightOf="@id/item_pass_iv"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -24,4 +27,14 @@
         app:layout_constraintTop_toBottomOf="@id/item_ssid_tv"
         app:layout_constraintLeft_toLeftOf="@id/item_ssid_tv"
         android:layout_marginTop="10dp"/>
+
+    <ImageView
+        android:id="@+id/item_pass_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="@id/item_ssid_tv"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:src="@drawable/ic_pass_lock"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
